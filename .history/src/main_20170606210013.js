@@ -4,7 +4,6 @@ import _ from 'lodash'
 import AppComponent from './components/app.component'
 import './filters'
 
-
 require('style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css');
 require('bootstrap');
 

@@ -3,7 +3,7 @@ import {Time} from './time'
 import _ from 'lodash'
 import AppComponent from './components/app.component'
 import './filters'
-
+import event from 'event'
 
 require('style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css');
 require('bootstrap');
