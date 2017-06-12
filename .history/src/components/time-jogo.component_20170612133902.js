@@ -47,7 +47,6 @@ export default {
           let gols = +this.novoJogo.casa.gols;
           let golsAdversario = +this.novoJogo.fora.gols;
           timeCasa.fimJogo(timeAdversario, gols, golsAdversario);
-          
           store.commit('update', timeCasa)
           store.commit('update', timeAdversario)
           store.commit('show-time-list')

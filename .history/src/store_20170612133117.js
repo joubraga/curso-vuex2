@@ -5,7 +5,7 @@ import { Time } from './time'
 Vue.use(Vuex)
 
 const state = {
-    view: 'tabela',
+    view: 'zona',
      times: [
           new Time(1, 'Palmeiras', require('./assets/palmeiras_60x60.png')),
           new Time(2, 'Flamengo', require('./assets/flamengo_60x60.png')),

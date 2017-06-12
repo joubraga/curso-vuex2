@@ -5,7 +5,7 @@ import { Time } from './time'
 Vue.use(Vuex)
 
 const state = {
-    view: 'tabela',
+    view: 'zona',
      times: [
           new Time(1, 'Palmeiras', require('./assets/palmeiras_60x60.png')),
           new Time(2, 'Flamengo', require('./assets/flamengo_60x60.png')),
@@ -32,24 +32,9 @@ const state = {
 
 const mutations = {
     update(state, time){
-        let index = state.times.findIndex(element => time.id === element.id);
 
-        if( index != -1 )
-        {
-            state.times[index] = time
-        }
-    },
-    'show-time-list'(state){
-        state.view = 'tabela'
-    },
-    'show-time-novojogo'(state){
-        state.view = 'novojogo'
 
-    },
-    'show-time-zona'(state){
-        state.view = 'zona'
-
-    },
+    }
 }
 
 export default new Vuex.Store({
@@ -57,6 +42,5 @@ export default new Vuex.Store({
     getters: {
         timesLibertadores: state => state.times.slice(0,6),
         timesRebaixados: state => state.times.slice(16,20),
-    },
-    mutations
+    }
 })
