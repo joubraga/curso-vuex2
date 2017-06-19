@@ -7,7 +7,9 @@ import './filters'
 import store from './store'
 import VueRouter from 'vue-router'
 
+
 Vue.use(VueRouter)
+
 
 require('style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css');
 require('bootstrap');

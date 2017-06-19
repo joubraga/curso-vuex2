@@ -7,14 +7,11 @@
             <a class="btn btn-primary" > Novo Jogo </a>
             <br><br>
         </div>
-        <router-view></router-view>
     </div>
 </template>
 
 <script type="text/javascript">
-   export default {
-       
-   }
+   
 </script>
 
 <style>

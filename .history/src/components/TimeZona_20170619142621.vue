@@ -1,10 +1,4 @@
-import {Time} from '../time'
-import _ from 'lodash'
-import store from '../store'
-
-
-export default {
-  template: `
+<template>
     <div>
       <h3> Times que irão para Libertadores</h3>
       <table class="table table-striped">
@@ -43,8 +37,15 @@ export default {
               </tr>
           </tbody>
       </table>
-    </div>`,
+    </div>
+</template>
 
+<script type="text/javascript">
+import {Time} from '../time'
+import _ from 'lodash'
+import store from '../store'
+
+export default {
   computed: {
     timesLibertadores(){
         return store.getters.timesLibertadores
@@ -56,3 +57,5 @@ export default {
     },
   }
 }
+
+</script>
