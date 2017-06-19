@@ -5,6 +5,8 @@ import store from '../store'
 export default {
   template: `
     <div>
+      <a class="btn btn-primary" @click="showNovoJogo"> Novo Jogo </a>
+      <br><br>
       <input type="text" class="form-control" v-model="filter">
       <table class="table table-striped">
           <thead>
@@ -15,7 +17,7 @@ export default {
           </tr>
           </thead>
           <tbody>
-              <tr v-for="(time, index) in timesFiltered" :class="{'success': index < 3, 'warning': index > 2 && index < 6, 'danger': index > 15}">
+              <tr v-for="time in timesFiltered">
                   <td>
                       <img :src="time.escudo" style="height: 30px; width: 30px;">
                       <strong>{{time.nome}}</strong>
@@ -42,6 +44,9 @@ export default {
     };
   },
   methods: {
+      showNovoJogo(){
+         store.commit('show-time-novojogo')
+      },
       sortBy(coluna){
           this.order.keys = coluna
           this.order.sort = this.order.sort == 'desc' ? 'asc': 'desc'

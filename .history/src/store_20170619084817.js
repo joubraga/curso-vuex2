@@ -14,9 +14,6 @@ const state = {
 }
 
 const mutations = {
-    'set-times' (state,times){
-        state.times = times
-    },
     update(state, time){
         let index = state.times.findIndex(element => time.id === element.id);
 
@@ -40,10 +37,10 @@ const mutations = {
 
 const actions = {
     'load-times'(context){
-        Vue.http.get('http://localhost:8080/src/dist/times.json').then(response => {
-            let times = response.data.map(element => new Time(element.id, element.nome, element.escudo))
-            context.commit('set-times', times)
+        Vue.http.get('http://localhost:8080/dist/times.json').then(response => {
+            let times = response.data.map(element = new Time(element.id, element.nome, element.escudo))
         })
+
     }
 }
 
@@ -53,6 +50,5 @@ export default new Vuex.Store({
         timesLibertadores: state => state.times.slice(0,6),
         timesRebaixados: state => state.times.slice(16,20),
     },
-    mutations,
-    actions
+    mutations
 })

@@ -15,7 +15,7 @@ export default {
           </tr>
           </thead>
           <tbody>
-              <tr v-for="(time, index) in timesFiltered" :class="{'success': index < 3, 'warning': index > 2 && index < 6, 'danger': index > 15}">
+              <tr v-for="(time, index) in timesFiltered" :class="{'success': index < 3, 'warning': index > 2 && index < 5}">
                   <td>
                       <img :src="time.escudo" style="height: 30px; width: 30px;">
                       <strong>{{time.nome}}</strong>
